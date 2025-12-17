@@ -37,7 +37,7 @@ model_path = "ensemble_model_v1.0.0.onnx"
 session = ort.InferenceSession(model_path)
 
 # === LOAD AND PREPROCESS IMAGE ===
-img_path = "apple.jpg"
+img_path = "image.jpg"
 img = Image.open(img_path).convert("RGB")
 img = img.resize((224, 224))
 img_array = np.array(img, dtype=np.float32) / 255.0
